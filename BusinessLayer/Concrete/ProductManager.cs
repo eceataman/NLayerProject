@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class ProductManager : ICustomerService
+    public class ProductManager : IProductService
     {
         IProductDal _productDal;
         public ProductManager(IProductDal productDal)
@@ -18,7 +18,7 @@ namespace BusinessLayer.Concrete
         }
         public Product GetByID(int id)
         {
-          return _productDal.GetById(id);
+            return _productDal.GetById(id);
         }
 
         public List<Product> GetList()
@@ -28,12 +28,12 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Product t)
         {
-            _productDal.Delete(t);
+           _productDal.Delete(t);
         }
 
         public void TInsert(Product t)
         {
-            _productDal.Insert(t);
+           _productDal.Insert(t);
         }
 
         public void TUpdate(Product t)

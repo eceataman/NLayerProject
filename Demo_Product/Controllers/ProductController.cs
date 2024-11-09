@@ -55,8 +55,8 @@ namespace Demo_Product.Controllers
         [HttpPost]
         public IActionResult EditProduct(Product p)
         {
-            var value=productManager.GetByID(p.Id);
-            productManager.TUpdate(value);
+            
+            productManager.TUpdate(p);
             return RedirectToAction("Index");
         }
     }

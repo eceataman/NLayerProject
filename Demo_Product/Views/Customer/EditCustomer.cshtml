@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.Customer
+@{
+    ViewData["Title"] = "EditCustomer";
+    Layout = "~/Views/Home/_UILayout.cshtml";
+}
+
+<form method="post">
+    @Html.Label("Müşteri adı")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Müşteri şehri")
+    @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-primary">müşteriyi güncelle</button>
+</form>
+

@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<Job>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Home/_UILayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>meslek ismi</th>
+        <th>sil</th>
+        <th>güncelle</th>
+        <th>detaylar</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        //tablo yapılarında ilk satır th yani başlık, sonraki satırlar td şeklinde gösterilir
+        <tr>
+            <td>@item.Name</td>
+            <td><a href="/Job/DeleteJob/@item.JobID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Job/EditJob/@item.JobID" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/Job/DetailsJob/@item.JobID" class="btn btn-outline-primary">meslek detayları</a></td>
+        </tr>
+    }
+
+</table>

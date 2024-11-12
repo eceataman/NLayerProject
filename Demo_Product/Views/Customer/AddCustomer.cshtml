@@ -14,8 +14,9 @@
     @Html.ValidationMessageFor(x => x.City)
     <br />
     @Html.Label("Meslek seçiniz")
+    @Html.DropDownListFor(x => x.JobID, (List<SelectListItem>)ViewBag.v,new { @class = "form-control" })
 
-    
+    <br />
     <button class="btn btn-primary">ürünü ekle</button>
 </form>
 
